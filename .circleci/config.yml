@@ -30,5 +30,9 @@ jobs:
       - slack/notify:
           color: '#42e2f4'
           mentions: << pipeline.parameters.slack_name >>
-          message: This is a custom message notification
+          message: This is a custom message notification!!!
+          author_name: CIRCLE_PR_USERNAME
+          author_link: github.com/CIRCLE_PR_USERNAME
+          title: CIRCLE_BRANCH
+          title_link: CIRCLE_PULL_REQUEST
           channel: "#general"
