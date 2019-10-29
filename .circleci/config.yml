@@ -14,3 +14,7 @@ jobs:
       - run:
           name: Print the Current Time
           command: date
+          
+      - slack/notify:
+          color: '#42e2f4'
+          message: This is a custom message notification ${CIRCLE_USERNAME}
