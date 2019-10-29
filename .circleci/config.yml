@@ -1,0 +1,11 @@
+version: 2.1
+
+orbs:
+  slack: circleci/slack@3.4.0
+
+workflows:
+  test-slack-notify:
+    jobs:
+      - slack/notify:
+          message: Test slack notify
+          color: '#42e2f4'
