@@ -21,4 +21,5 @@ jobs:
           
       - slack/notify:
           color: '#42e2f4'
-          message: This is a custom message notification ${CIRCLE_USERNAME}
+          message: "This is a custom message notification @${CIRCLE_USERNAME}"
+          channel: "#general"
