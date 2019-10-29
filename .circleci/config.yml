@@ -6,7 +6,7 @@ orbs:
 parameters:
   slack_name:
     type: string
-    default: ""
+    default: "rockwjx"
   slack_channel:
     type: string
     default: ""
@@ -29,5 +29,6 @@ jobs:
           
       - slack/notify:
           color: '#42e2f4'
-          message: This is a custom message notification \<\@rockwjx\>
+          mentions: << pipeline.parameters.slack_name >>
+          message: This is a custom message notification
           channel: "#general"
