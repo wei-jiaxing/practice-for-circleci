@@ -1,30 +1,9 @@
-#version: 2.1
-
-orbs:
-  slack: circleci/slack@3.4.0
-
-workflows:
-  test-slack-notify:
-    jobs:
-      - test-slack-notify
-  
-          
 # Ruby CircleCI 2.0 configuration file
 #
 # Check https://circleci.com/docs/2.0/language-ruby/ for more details
 #
 version: 2
 jobs:
-  test-slack-notify:
-    docker:
-      - image: circleci/ruby:2.4.1-node-browsers
-    steps:
-      - checkout
-      - run:
-        command: echo "Hello ${CIRCLE_USERNAME}"
-      - slack/notify:
-          color: '#42e2f4'
-          message: This is a custom message notification ${CIRCLE_USERNAME}
   build:
     docker:
       # specify the version you desire here
