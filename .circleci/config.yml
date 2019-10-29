@@ -3,6 +3,14 @@ version: 2.1
 orbs:
   slack: circleci/slack@3.4.0
 
+parameters:
+  slack_name:
+    type: string
+    default: ""
+  slack_channel:
+    type: string
+    default: ""
+    
 jobs:
   build:
     docker:
@@ -21,5 +29,5 @@ jobs:
           
       - slack/notify:
           color: '#42e2f4'
-          message: "This is a custom message notification <@rockwjx>"
+          message: This is a custom message notification \<\@rockwjx\>
           channel: "#general"
