@@ -27,10 +27,6 @@ jobs:
           name: Print the Current Time
           command: date
           
-      - slack/notify:
-          color: '#42e2f4'
+      - slack/status:
           mentions: << pipeline.parameters.slack_name >>
-          message: "This is a custom message notification!!!"
-          title: "ブランチ： ${CIRCLE_BRANCH}"
-          title_link: ${CIRCLE_PULL_REQUEST}
           channel: "#general"
