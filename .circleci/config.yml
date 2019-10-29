@@ -6,10 +6,10 @@ orbs:
 workflows:
   test-slack-notify:
     jobs:
-      - test-slack-notify
+      - build
           
 jobs:
-  test-slack-notify:
+  build:
     docker:
       - image: circleci/ruby:2.4.1-node-browsers
     steps:
