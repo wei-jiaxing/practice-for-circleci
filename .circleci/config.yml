@@ -32,7 +32,7 @@ jobs:
           mentions: << pipeline.parameters.slack_name >>
           message: "This is a custom message notification!!!\n${CIRCLE_PR_USERNAME}\n${CIRCLE_PR_USERNAME}\n${CIRCLE_BRANCH}\n${CIRCLE_PULL_REQUEST}"
           author_name: ${CIRCLE_PR_USERNAME}
-          author_link: https://www.github.com/${CIRCLE_PR_USERNAME}
-          title: ブランチ： ${CIRCLE_BRANCH}
+          author_link: "https://www.github.com/${CIRCLE_PR_USERNAME}"
+          title: "ブランチ： ${CIRCLE_BRANCH}"
           title_link: ${CIRCLE_PULL_REQUEST}
           channel: "#general"
