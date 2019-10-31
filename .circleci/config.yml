@@ -30,3 +30,7 @@ jobs:
       - slack/status:
           mentions: << pipeline.parameters.slack_name >>
           channel: "#general"
+          include_job_number_field: false
+          include_project_field: false
+          success_message: 成功!
+          failure_message: 失敗！
