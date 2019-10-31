@@ -13,7 +13,7 @@ parameters:
     
 jobs:
   build:
-    parallelism: 10
+    parallelism: 3
     docker:
       - image: circleci/node:7.10
 
