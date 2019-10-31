@@ -6,10 +6,10 @@ orbs:
 parameters:
   slack_name:
     type: string
-    default: ""
+    default: "U0E4MF1NV"
   slack_channel:
     type: string
-    default: "U0E4MF1NV"
+    default: "#general"
     
 jobs:
   build:
