@@ -6,7 +6,7 @@ orbs:
 parameters:
   slack_name:
     type: string
-    default: "rockwjx"
+    default: ""
   slack_channel:
     type: string
     default: ""
