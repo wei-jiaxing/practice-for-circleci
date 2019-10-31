@@ -20,13 +20,8 @@ jobs:
       - checkout
 
       - run:
-          name: Greeting
-          command: echo Hello, world.
-
-      - run:
-          name: Print the Current Time
-          command: date
-          
+          command: exit 1
+                    
       - slack/notify:
           color: '#42e2f4'
           mentions: << pipeline.parameters.slack_name >>
@@ -36,3 +31,9 @@ jobs:
           title: "ブランチ： ${CIRCLE_BRANCH}"
           title_link: ${CIRCLE_PULL_REQUEST}
           channel: "#general"
+
+      - run:
+          name: Print the Current Time
+          command: exit 0
+          
+      - slack/notify-on-failure
