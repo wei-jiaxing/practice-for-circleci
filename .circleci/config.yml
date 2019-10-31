@@ -9,7 +9,7 @@ parameters:
     default: ""
   slack_channel:
     type: string
-    default: ""
+    default: "U0E4MF1NV"
     
 jobs:
   build:
