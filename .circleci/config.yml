@@ -31,8 +31,8 @@ workflows:
   test_slack:
     jobs:
       - build
-        post-steps:
-          - slack/status:
+          post-steps:
+            - slack/status:
                 mentions: << pipeline.parameters.slack_user >>	
                 channel: << pipeline.parameters.slack_channel >>	
                 include_job_number_field: false	
