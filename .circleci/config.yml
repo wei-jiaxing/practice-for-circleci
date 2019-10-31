@@ -30,7 +30,7 @@ jobs:
 workflows:
   test_slack:
     jobs:
-      - build
+      - build:
           post-steps:
             - slack/status:
                 mentions: << pipeline.parameters.slack_user >>	
