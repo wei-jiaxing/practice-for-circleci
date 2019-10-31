@@ -33,9 +33,9 @@ workflows:
       - build:
           post-steps:
             - slack/status:
-                mentions: << pipeline.parameters.slack_user >>	
-                channel: << pipeline.parameters.slack_channel >>	
-                include_job_number_field: false	
-                include_project_field: false	
-                success_message: ":tada:${CIRCLE_BRANCH}のテストが成功したよ！( ^ヮ^)\n${CIRCLE_PULL_REQUEST}"	
+                mentions: << pipeline.parameters.slack_user >>
+                channel: << pipeline.parameters.slack_channel >>
+                include_job_number_field: false
+                include_project_field: false
+                success_message: ":tada:${CIRCLE_BRANCH}のテストが成功したよ！( ^ヮ^)\n${CIRCLE_PULL_REQUEST}"
                 failure_message: ":x:${CIRCLE_BRANCH}テストが失敗しちゃったよ( x_x)\n${CIRCLE_PULL_REQUEST}"
